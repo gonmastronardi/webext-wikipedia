@@ -1,0 +1,48 @@
+{
+
+	"manifest_version": 2,
+	"name": "RMC example",
+	"version": "1.0",
+	"description": "Example web-extension using RMC and Façades to connect background and content",
+	"icons":{
+	    "48": "src/resources/button.png"
+    },
+
+	"background": {
+	    "scripts": [
+			"src/node_modules/webextension-polyfill/dist/browser-polyfill.min.js", 
+			"src/shared/Facade.js",
+			"src/background/Wikipedia.js",
+			"src/background/BackgroundFacade.js",
+			"src/shared/RMCProxyFactory.js",
+			"src/background/background.js"
+	    ]
+	},
+
+	"content_scripts": [{
+		"matches": ["http://*/*","https://*/*"],
+		"js": [
+			"src/node_modules/webextension-polyfill/dist/browser-polyfill.min.js",
+			"src/shared/Facade.js",
+			"src/content_script/ContentFacade.js",
+			"src/content_script/Scrambler.js",	
+			"src/shared/RMCProxyFactory.js",
+			"src/content_script/content.js"
+		],
+		"run_at": "document_end"   
+	}],
+
+	"browser_action": {
+		"default_icon": {
+			"19": "src/resources/button.png",
+			"38": "src/resources/button.png"
+		},
+		"default_title": "RMC example"
+	},
+
+    "permissions": [
+    	"tabs",
+    	"<all_urls>"
+    ]
+
+}

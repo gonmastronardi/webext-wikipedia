@@ -1,0 +1,24 @@
+{
+  "name": "webext-example-rmc-facades",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "web-extensions": "^0.2.0",
+    "webextension-polyfill": "^0.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://casco@bitbucket.org/casco/webext-example-rmc-facades.git"
+  },
+  "author": "",
+  "license": "GPL20",
+  "bugs": {
+    "url": "https://bitbucket.org/casco/webext-example-rmc-facades/issues"
+  },
+  "homepage": "https://bitbucket.org/casco/webext-example-rmc-facades/src"
+}
